@@ -1,0 +1,113 @@
+.the-header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: transparent;
+}
+
+.logo {
+  display: inline-block;
+  width: 80px;
+  height: 100%;
+  text-align: center;
+  color: #2f54eb;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  border-right: 1px solid #000;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  cursor: pointer;
+  user-select: none;
+  font-size: 14px;
+  padding: 0 16px;
+  border-left: 1px solid #000;
+  &.disabled {
+    cursor: not-allowed;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.the-guiEditor {
+  padding-top: 0;
+  font-size: 16px;
+  overflow-y: auto;
+}
+
+.tip {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.tip-icon {
+  margin-right: 6px;
+}
+
+.the-modal {
+  :global {
+    .ht-modal-content {
+      height: 100%;
+      overflow: auto;
+    }
+  }
+}
+
+.the-input-wrap {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #fff;
+  :global {
+    .ht-input-group-wrapper {
+      position: relative;
+      display: block;
+      border-radius: 3px;
+      transition: all 0.3s;
+      &:hover,
+      &:focus {
+        border-color: #40a9ff;
+        outline: 0;
+        box-shadow: 0 0 0 1px rgba(24, 144, 255, 0.8);
+      }
+    }
+    .ht-input-group-addon {
+      background-color: transparent;
+      border-color: transparent;
+      color: #fff;
+      text-align: right;
+      padding-right: 0;
+    }
+
+    .ht-input {
+      padding: 0;
+      background-color: transparent;
+      border-color: transparent;
+      color: #fff;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .ht-input-affix-wrapper:hover .ht-input:not(.ht-input-disabled) {
+      background-color: transparent;
+      border-color: transparent;
+      color: #fff;
+    }
+  }
+}

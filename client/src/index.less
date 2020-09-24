@@ -1,0 +1,94 @@
+@import '~antd/lib/style/themes/default.less';
+
+#hetu-editor-root {
+  min-width: 600px;
+  height: auto;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #f5f5f5;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #aaa;
+}
+
+canvas {
+  display: block;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+// spin
+.ht-spin.g-spin {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 20%;
+}
+
+// 展示form页面添加组件时的占位符
+.hetu-form-placeholder-indicator {
+  position: relative;
+  display: flex;
+  height: 135px;
+  width: 100%;
+  background: #f9f9f9;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.hetu-form-placeholder-indicator:after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  bottom: 8px;
+  left: 8px;
+  border: 1px dashed rgba(0, 0, 0, 0.85);
+  border-radius: 4px;
+}
+
+
+
+.ht-form-item-tooltip {
+  font-size: 13px;
+
+  .ht-tooltip-inner {
+    padding: 12px 16px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 1);
+  }
+
+  .ht-tooltip-arrow::before {
+    background-color: #fff;
+  }
+}
+
+.ht-calendar-picker {
+  .ht-input {
+    line-height: normal !important;
+  }
+}

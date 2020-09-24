@@ -1,0 +1,76 @@
+.the-card {
+  position: relative;
+  border-radius: 4px;
+  width: 400px;
+  height: 250px;
+  margin: 10px;
+  overflow: hidden;
+  background: #fff;
+  transform: translateY(0);
+  box-shadow: 0 0 0 rgba(163, 177, 191, 0);
+  transition: box-shadow 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+    transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  box-shadow: 0 8px 24px rgba(163, 177, 191, 0.35);
+}
+
+.the-card-content {
+  height: 250px;
+}
+
+.the-card-footer {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-48px);
+  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  line-height: 48px;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 700;
+
+  &.is-hover {
+    transform: translateY(-100%);
+  }
+}
+
+.the-card-title {
+  color: #314659;
+  background: rgba(255, 255, 255, 0.75);
+  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.the-card-desc {
+  color: #314659;
+  background: rgba(255, 255, 255, 0.75);
+  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.the-button-group {
+  background: #2f54eb;
+  display: flex;
+}
+
+.the-button {
+  flex: 1;
+  color: #fff;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.88);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:visited,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.ht-img-modal {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

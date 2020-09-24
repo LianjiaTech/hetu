@@ -1,0 +1,47 @@
+.the-sider-right {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.tabs {
+  display: flex;
+  height: 64px;
+  margin: 0;
+  border-bottom: 1px solid #000;
+}
+.tabs-item {
+  padding: 0 24px;
+  line-height: 64px;
+  height: 64px;
+  cursor: pointer;
+  user-select: none;
+  border-right: 1px solid #000;
+  white-space: nowrap;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.7);
+  &.is-selected {
+    border-bottom: 1px solid #262626;
+    color: #fff;
+  }
+}
+
+.the-tip {
+  color: rgba(255, 255, 255, 0.75);
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+.the-tip-icon {
+  margin-right: 6px;
+  font-size: 12px;
+}
+
+.the-base-wrap {
+  flex: 1;
+  overflow: auto;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0 16px;
+}

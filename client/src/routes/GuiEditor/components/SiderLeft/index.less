@@ -1,0 +1,104 @@
+@width: 40px;
+@edit-text-color: white;
+
+.the-sider-left {
+  width: @width;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #000;
+  box-sizing: border-box;
+
+  .edit-drawer {
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
+
+    overflow: -moz-scrollbars-none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    padding: 20px 8px;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: scroll;
+    z-index: 100;
+    background: #262626;
+    transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86),
+  }
+
+  .property-wrapper {
+    margin-bottom: 8px;
+  }
+
+  .property-title {
+    line-height: 30px;
+    color: fade(@edit-text-color, 75);
+    margin: 8px;
+  }
+
+  .component-button {
+    width: 50%;
+    display: inline-block;
+    padding: 0 8px;
+    margin-bottom: 10px;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 32px;
+    color: fade(@edit-text-color, 60);
+
+    .ht-btn {
+      border-color: rgba(255, 255, 255, 0.2);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: white;
+      text-align: left;
+      height: 30px;
+      font-size: 13px;
+    }
+
+    .ht-btn:hover {
+      border-color: #40a9ff;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .button-group {
+    position: absolute;
+    left: 250px;
+    transform: translateX(-100%);
+    z-index: 999;
+    color: #fff;
+    background: transparent;
+  }
+
+  .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    color: #fff;
+    padding: 8px 16px;
+
+    .icon {
+      margin-bottom: 8px;
+    }
+
+    .text {
+      font-size: 14px;
+      writing-mode: vertical-lr;
+      display: inline-block;
+      letter-spacing: 4px;
+    }
+  }
+
+  .the-footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.ht-tooltip  {
+  max-width: 262px;
+}

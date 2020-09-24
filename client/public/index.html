@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="referrer" content="origin">
+  <title>河图</title>
+  <link rel="shortcut icon" href="/favicon.ico" />
+</head>
+
+<body class="hetu-editor-body">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="hetu-editor-root"></div>
+  <!-- htmlWebpackPlugin本身内置了ejs模板引擎, 导致预留的ejs语法会被htmlWebpackPlugin自己先渲染一遍 -->
+  <script>
+    window['ENV'] = '<%=htmlWebpackPlugin.options.injectServerEnvTemplate%>'
+  </script>
+  <div id="modal-root"></div>
+</body>
+
+</html>

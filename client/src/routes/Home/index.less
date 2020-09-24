@@ -1,0 +1,45 @@
+.page-home {
+  display: flex;
+}
+
+.page-home-aside {
+  flex-shrink: 0;
+  transition: width 0.3s;
+}
+
+.hetu-editor-body .page-home-content {
+  width: 100vw;
+}
+
+.page-home-content {
+  flex: 1;
+  z-index: 0;
+}
+
+.page-home-buttons {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 255px;
+  background: #1890ff;
+  border-radius: 0 0 4px 4px;
+  display: flex;
+}
+
+.page-home-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  pointer-events: auto;
+
+  &.is-disabled {
+    cursor: not-allowed;
+    color: rgba(255, 255, 255, 0.25);
+  }
+}

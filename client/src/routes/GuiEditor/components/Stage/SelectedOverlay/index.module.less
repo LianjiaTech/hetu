@@ -1,0 +1,48 @@
+.select-overlay {
+  z-index: 10;
+  position: absolute;
+  border: 2px solid #2f54eb;
+  border-radius: 3px;
+  z-index: 100;
+
+  :global {
+    .select-overlay-icon {
+      cursor: pointer;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 0 !important;
+      text-align: center;
+      margin-left: -16px;
+      margin-top: -16px;
+      color: #000;
+      border-radius: 32px;
+      border: none;
+      background-color: #fff;
+      overflow: hidden;
+      box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.1);
+      pointer-events: auto;
+    }
+
+    .select-overlay-icon--drag {
+      left: 50%;
+      transform: translateX(-20px);
+    }
+
+    // .select-overlay-icon--add {
+    //   left: 50%;
+    //   background-image: url('~assets/button-add.png');
+    //   background-repeat: no-repeat;
+    //   background-size: 16px 16px;
+    //   background-position: 50% 50%;
+    // }
+
+    .select-overlay-icon--delete {
+      left: 50%;
+      transform: translateX(20px);
+      color: red;
+    }
+  }
+}

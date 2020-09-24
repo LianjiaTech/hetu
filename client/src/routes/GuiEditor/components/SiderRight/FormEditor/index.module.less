@@ -1,0 +1,227 @@
+.the-form-guiEditor {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+  padding: 16px 0;
+
+  :global {
+
+    .ht-input,
+    .ht-input-number,
+    .ht-input-number-input {
+      width: 100%;
+      overflow: hidden;
+      height: 28px;
+      line-height: 28px;
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0.55);
+      color: #9cdcfe;
+      box-sizing: content-box;
+
+      &:focus,
+      &:hover {
+        border-color: rgba(255, 255, 255, 1);
+        box-shadow: inset 0 0 4px #fff;
+      }
+    }
+
+    .ht-input-number-handler-up-inner,
+    .ht-input-number-handler-down-inner {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .ht-input-number-handler-wrap {
+      color: rgba(255, 255, 255, 1);
+      background-color: transparent;
+    }
+
+    .ht-input-number-handler:hover .ht-input-number-handler-up-inner,
+    .ht-input-number-handler:hover .ht-input-number-handler-down-inner {
+      color: rgba(255, 255, 255, 1);
+      border-color: rgba(255, 255, 255, 1);
+    }
+
+    .ht-form-item {
+      margin-bottom: 0;
+      padding: 8px 16px;
+    }
+
+    .ht-form-extra {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.70);
+    }
+
+    .ht-form-item-control {
+      line-height: 28px;
+    }
+
+    .ht-form-item-label {
+      display: block;
+      text-align: left;
+      line-height: 30px;
+    }
+
+    .ht-form-item-label a {
+      font-size: 12px;
+      line-height: 22px;
+      height: 22px;
+    }
+
+    .ht-form-item-label label {
+      line-height: 22px;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .ht-form-item-label>label::after {
+      display: none;
+    }
+
+    // select
+    .ht-select-selection {
+      width: 100%;
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0.55);
+      color: #9cdcfe;
+
+      &:focus,
+      &:hover {
+        border-color: rgba(255, 255, 255, 1);
+        box-shadow: inset 0 0 4px #fff;
+      }
+
+      .ht-select-selection__rendered {
+        line-height: 28px;
+      }
+    }
+
+    .ht-select-selection--single {
+      height: auto;
+    }
+
+    .ht-select-selection--multiple .ht-select-selection__choice {
+      border-radius: 4px;
+      background-color: rgba(156, 220, 254, 0.2);
+      border-color: rgba(156, 220, 254, .8)
+    }
+
+    .ht-select-selection--multiple .ht-select-selection__choice__content {
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .ht-select-selection--multiple .ht-select-selection__choice__remove {
+      color: #fff;
+    }
+
+    // button
+    .ht-btn:not(.ht-btn-link) {
+      color: rgba(255, 255, 255, 0.55);
+      background-color: #2d2c2c;
+    }
+
+    // textarea
+    form textarea.ht-input {
+      margin-bottom: 0;
+    }
+
+    // 折叠面板
+    .ht-collapse-content {
+      background-color: transparent;
+      border-top: none;
+    }
+
+    .ht-collapse-borderless {
+      background-color: transparent;
+    }
+
+    .ht-collapse>.ht-collapse-item {
+      border-bottom: none;
+    }
+
+    .ht-collapse-content>.ht-collapse-content-box {
+      background-color: transparent;
+      padding: 0 0 0 8px;
+    }
+
+    .ht-collapse>.ht-collapse-item>.ht-collapse-header {
+      color: rgba(255, 255, 255, 0.7);
+      border-bottom: none;
+      padding: 14px 16px;
+
+      // border-bottom: 1px solid #000;
+      .ht-collapse-arrow {
+        left: auto;
+        right: 16px;
+      }
+    }
+
+    // 将编辑器开关背景色改为灰色, 避免和之前的黑色背景重合
+    button.ht-switch {
+      background-color: #909090;
+    }
+
+    button.ht-switch.ht-switch-checked {
+      background-color: #1890ff;
+    }
+
+    .props-editor-json-editor.base-editor {
+      // 干掉组件上方的留白
+      padding-top: 10px;
+    }
+
+    [class~=level-0] {
+      .ht-collapse-content>.ht-collapse-content-box {
+        padding: 0;
+      }
+    }
+
+    [class~=level-1] {
+      border-bottom: solid .5px rgba(0, 0, 0, 0.8);
+
+      .ht-collapse-content,
+      .ht-collapse-header {
+        padding-left: 8px;
+        padding-bottom: 12px;
+      }
+    }
+  }
+}
+
+.m-collapse {
+  background: transparent;
+  color: '#fff';
+  border-radius: 0;
+  margin-bottom: 0;
+  border: 0;
+  overflow: hidden;
+
+  &.object-property-editor {
+    :global {
+      margin-bottom: 4px;
+    }
+  }
+
+  :global {
+    .ht-form-item {
+      padding: 4px 16px;
+    }
+  }
+}
+
+.the-guiEditor {
+  margin: 0;
+  padding-top: 0;
+  font-size: 15px;
+  overflow-y: auto;
+}
+
+.the-link {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.link-api {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.the-label-icon {
+  margin-left: 4px;
+}

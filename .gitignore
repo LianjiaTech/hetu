@@ -1,0 +1,34 @@
+logs/
+npm-debug.log
+yarn-error.log
+node_modules/
+yarn.lock
+coverage/
+.idea/
+run/
+.DS_Store
+*.sw*
+*.un~
+dist/*
+mochawesome-report/
+
+#   屏蔽编译ts后生成的js/js.map文件
+server/app/**/*.js
+server/app/**/*.js.map
+server/src/**/*.js
+server/src/**/*.js.map
+server/dist/**/*.js
+server/dist/**/*.js.map
+
+#   忽略编译出来的静态文件
+server/app/public/
+#   自带的index.html会在线上打包时被覆盖掉, 所以没有问题
+server/dist
+client/dist
+
+client/.env.local
+.history
+.vscode
+
+# 系统配置文件
+system_config.ini
