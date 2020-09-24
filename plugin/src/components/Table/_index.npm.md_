@@ -1,0 +1,53 @@
+---
+category: Components
+type: 数据展示
+title: Table
+subtitle: 表格
+cols: 1
+---
+
+通用表格
+
+## API
+
+| 属性       | 说明                                                                             | 类型   | 默认值 |
+| ---------- | -------------------------------------------------------------------------------- | ------ | ------ |
+| uniqueKey  | 表格数据项唯一标识                                                               | string | 'id'   |
+| dataSource | 数据                                                                             | array  | []     |
+| scroll     | 设置横向或纵向滚动，也可用于指定滚动区域的宽和高，可以设置为像素值，百分比，true | object | -      |
+| columns    | 表格列配置                                                                       | array  | -      |
+| pagination | 分页器，参考配置项或 pagination 文档，设为 false 时不展示和进行分页              | object | -      |
+| selections | 批量操作                                                                         | array  | -      |
+
+### List columns
+| 属性        | 说明                                                                                                | 类型                    | 默认值 |
+| ----------- | --------------------------------------------------------------------------------------------------- | ----------------------- | ------ |
+| title       | 必填,列头显示文字                                                                                   | string                  | -      |
+| dataIndex   | 列数据在数据项中对应的 key，支持 a[0].b.c[1] 的嵌套写法                                             | string                  | -      |
+| fixed       | 固定列配置,可选值有`left | right | false`                                                           | string \|boolean        | false  |
+| width       | 列宽度                                                                                              | number \| string        | -      |
+| align       | 列对齐方式                                                                                          | left \| right \| center | left   |
+| operations  | 列表操作                                                                                            | array                   | -      |
+| render      | 生成复杂数据的渲染函数，参数分别为当前行的值，当前行数据，行索引，@return 里面可以设置表格行/列合并 | function(text,row)      | -      |
+| renderType  | 渲染类型, 可选值有`a img`, 与render互斥, 优先级高于render                                           | string                  | -      |
+| renderProps | 设置renderType时有效, 作用于`a`或`img`标签上                                                        |
+
+### List columns operations
+
+| 属性       | 说明                                                                                         | 类型           | 默认值 |
+| ---------- | -------------------------------------------------------------------------------------------- | -------------- | ------ |
+| text       | 必填,按钮文案                                                                                | string         | -      |
+| type       | 文案样式, 可选值有`danger`                                                                   | string         | -      |
+| actionType | 操作类型, 可选值有`ajax jump modalForm`                                                      | string         | jump   |
+| url        | 必填,modalForm, 表示请求地址; 为jump时, 表示跳转链接                                        | string         | -      |
+| fields     | actionType为modalForm时, 弹框表单的表单项, 参考 [Form fields](/components/Form/#Form-fields) | array          | -      |
+| transform  | 发送请求前, 数据格式转换                                                                     | function(data) | -      |
+
+### List pagination
+| 属性      | 说明                           | 类型                       | 默认值                    |
+| --------- | ------------------------------ | -------------------------- | ------------------------- |
+| showTotal | 用于显示数据总量和当前数据顺序 | function(total)            | (total) => `共${total}项` |
+| current   | 第几页                         | number                     | 1                         |
+| pageSize  | 每一页大小                     | number                     | 20                        |
+| total     | 总页数                         | number                     | 0                         |
+| onChange  | 分页器变化                     | function(current,pageSize) | -                         |

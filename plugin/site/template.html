@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html class="zh-cn">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="never" />
+    <title>hetu</title>
+
+    {% for cssFile in manifest["css"] %}
+    <link rel="stylesheet" type="text/css" href="{{ root }}{{ cssFile }}" />
+    {% endfor %}
+    <style id="nprogress-style">
+      #nprogress {
+        display: none;
+      }
+    </style>
+    <link rel="stylesheet/less" type="text/css" href="{{ root }}color.less" />
+  </head>
+
+  <body>
+    <div id="react-content">
+      {{ content | safe }}
+    </div>
+    {% for jsFile in manifest["js"] %}<script src="{{ root }}{{
+        jsFile
+      }}"></script>
+    {% endfor %}
+  </body>
+</html>

@@ -1,0 +1,22 @@
+---
+category: Components
+type: 业务组件
+title: Card
+subtitle: 卡片
+cols: 1
+order: 0
+---
+
+## 何时使用
+
+包裹 `List、Form`等页面的容器。
+
+## API
+
+### Card
+
+| 参数  | 说明                 | 类型                | 默认值   |
+| ----- | -------------------- | ------------------- | -------- |
+| extra | 卡片右上角的操作区域 | Array&lt;ReactNode> | -        |
+| title | 卡片标题             | string\|ReactNode   | 页面标题 |
+| bordered | 是否有边框          | boolean   | true |

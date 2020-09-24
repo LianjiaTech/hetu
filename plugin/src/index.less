@@ -1,0 +1,79 @@
+@error-color: #f5222d;
+
+// spin
+.g-spin {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 20%;
+}
+
+div.ht-input-number {
+  width: 100%;
+}
+
+// flex布局样式
+.g-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.g-cell__hd {
+  flex-shrink: 0;
+}
+
+.g-cell__bd {
+  flex: 1;
+}
+
+.g-cell__ft {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.g-js-row {
+  margin: 6px 0;
+}
+
+// js 强调
+.g-js-strong {
+  font-weight: bold;
+  margin: 0 2px;
+}
+
+// js 代码块
+.g-js-block {
+  font-size: 12px;
+  padding: .2em .4em;
+  word-break: break-word;
+  color: #009e9d;
+  background-color: #f8f9fa;
+  border-radius: 2px;
+}
+
+// link
+.g-link--error {
+  color: @error-color;
+
+  &:focus {
+    color: @error-color;
+  }
+
+  &:hover {
+    color: saturate(@error-color, 40%);
+  }
+
+  &:active {
+    color: desaturate(@error-color, 40%);
+  }
+
+  &:visited {
+    color: @error-color;
+  }
+}

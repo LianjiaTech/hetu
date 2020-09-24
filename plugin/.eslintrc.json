@@ -1,0 +1,54 @@
+{
+  "extends": [
+    "alloy",
+    "alloy/react",
+    "alloy/typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "jest"
+  ],
+  "env": {
+    // 您的环境变量（包含多个预定义的全局变量）
+    // Your environments (which contains several predefined global variables)
+    "jest/globals": true
+    // browser: true,
+    // node: true,
+    // mocha: true,
+    // jest: true,
+    // jquery: true
+  },
+  "globals": {
+    // 您的全局变量（设置为 false 表示它不允许被重新赋值）
+    // Your global variables (setting to false means it"s not allowed to be reassigned)
+    //
+    // myGlobal: false
+  },
+  "rules": {
+    // 禁止使用 var
+    "no-var": "error",
+    // 优先使用 interface 而不是 type
+    "@typescript-eslint/consistent-type-definitions": [
+      "error",
+      "interface"
+    ],
+    // disable the rule for all files
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/prefer-optional-chain": "off",
+    "@typescript-eslint/no-invalid-this": "off",
+    "@typescript-eslint/no-loss-of-precision": "off",
+    "@typescript-eslint/prefer-for-of": "off",
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "no-template-curly-in-string": "off",
+    "default-case-last": "off",
+    "no-loss-of-precision": "off",
+    "no-useless-backreference": "off",
+    "no-promise-executor-return": "off",
+    "no-unreachable-loop": "off"
+  }
+}

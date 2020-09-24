@@ -1,0 +1,66 @@
+---
+order: 0
+title: 基本使用
+---
+
+- `title` 卡片标题, 默认为页面标题
+- `extra` 卡片右上角的操作区域, 通常用于放置 `添加、前往`等按钮
+
+```jsx
+import Hetu from 'hetu'
+
+const elementConfig = {
+  "type": "HtCard",
+  "props": {
+    "title": "页面标题",
+    "extra": [
+      {
+        "type": "HtButton",
+        "props": {
+          "href": "/components/Card/"
+        },
+        "children": [
+          "跳转到新页面"
+        ]
+      }
+    ]
+  },
+  "children": [
+    {
+      "type": "HtList",
+      "props": {
+        "url": "/api/list",
+        "buttons": [],
+        "pageSize": 2,
+        "columns": [
+          {
+            "title": "id",
+            "dataIndex": "id",
+            "width": 50
+          },
+          {
+            "title": "banner",
+            "dataIndex": "imageUrl",
+            "width": 60,
+            "renderType": "img"
+          },
+          {
+            "title": "预览链接",
+            "dataIndex": "preview",
+            "width": 80,
+            "renderType": "a"
+          },
+          {
+            "title": "标签",
+            "dataIndex": "tags",
+            "width": 100
+          }
+        ]
+      }
+    }
+  ]
+}
+
+
+ReactDOM.render(<Hetu elementConfig={elementConfig} />, mountNode)
+```

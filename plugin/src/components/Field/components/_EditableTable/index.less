@@ -1,0 +1,77 @@
+.ht-editable-table {
+  width: 100%;
+  overflow: auto;
+
+  tr[data-row-key^=__children__] {
+    background-color: #fffee6;
+
+    >td {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+
+    .ht-input {
+      font-size: 14px;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+  }
+
+  .ht-table-tbody>tr>td {
+    padding: 6px 4px;
+  }
+
+  .ht-form-explain {
+    position: absolute;
+  }
+}
+
+.ht-editable-cell-value-wrap {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  line-height: 1.5;
+  min-height: 32px;
+  padding: 4px 10px;
+  margin: 6px 0;
+  word-break: break-word;
+
+  .ht-table-row-expand-icon {
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.ht-editable-row:hover {
+  .ht-editable-cell-value-wrap {
+    border-color: #d9d9d9;
+  }
+}
+
+.ht-cloumn-operation {
+  .ht-btn {
+    padding-left: 0;
+    padding-right: 8px;
+  }
+
+  .ht-btn.danger {
+    color: red;
+  }
+}
+
+.ht-btn-link {
+  color: #1890ff;
+  background-color: transparent;
+  border-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  &:hover {
+    color: #40a9ff;
+    background-color: transparent;
+    border-color: transparent;
+  }
+}

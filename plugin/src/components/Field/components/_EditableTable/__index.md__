@@ -1,0 +1,31 @@
+---
+category: Components
+type: Field 表单项
+title: EditableTable
+subtitle: 可编辑器的表格
+cols: 1
+order: 14
+---
+
+## 何时使用
+需要编辑`Array<Object>`类型的数据时
+
+## API
+
+| 参数           | 说明                                 | 类型            | 默认值 |
+| -------------- | ------------------------------------ | --------------- | ------ |
+| value          | 表单值                               | array           | -      |
+| onChange       | 表格数据变化                         | function(value) | -      |
+| columns        | 表格列                               | array           | -      |
+| canAdd         | 是否允许动态添加                     | boolean         | true   |
+| canAddChildren | 是否允许动态添加子元素, 最多添加一级 | boolean         | false  |
+| columnRules    | 列校验规则                           | object          | -      |
+
+## columns
+
+| 参数      | 说明           | 类型             | 默认值 |
+| --------- | -------------- | ---------------- | ------ |
+| title     | 列标题         | string           | -      |
+| dataIndex | 列字段         | string           | -      |
+| editable  | 列是否允许编辑 | bool             | true   |
+| width     | 列宽度         | string \| number | -      |

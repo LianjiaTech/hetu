@@ -1,0 +1,43 @@
+---
+category: 快速上手
+order: 4
+title: 创建页面
+---
+
+### 点击页面管理
+![](https://user-gold-cdn.xitu.io/2019/7/2/16bb1a047a13c9c5?w=877&h=268&f=png&s=22631)
+
+### 点击新建页面
+![](https://user-gold-cdn.xitu.io/2019/7/2/16bb1a17212c43fa?w=888&h=372&f=png&s=37549)
+
+
+### 选择页面模版
+![](https://user-gold-cdn.xitu.io/2019/7/2/16bb1a24891a34a5?w=867&h=344&f=png&s=55561)
+
+### 填写页面路径和标题
+![](https://user-gold-cdn.xitu.io/2019/7/2/16bb1a3d66fae401?w=547&h=371&f=png&s=23658)
+
+### 进入编辑器
+![](https://user-gold-cdn.xitu.io/2019/7/2/16bb1a6088099d83?w=1273&h=772&f=png&s=333021)
+
+### 修改组件属性(待补充)
+鼠标移动到元素上点击, 选中对应的组件,例如HtCard, 然后打开对应组件的文档[HtCard](/components/Card/)
+![](https://user-gold-cdn.xitu.io/2019/7/2/16bb1a790371504b?w=680&h=354&f=png&s=39233)
+
+找到对应的api文档及demo示例代码
+![](https://user-gold-cdn.xitu.io/2019/7/2/16bb1aa463d4eb31?w=744&h=324&f=png&s=27733)
+
+### 保存
+
+`ctrl+s`或`command+s`即可保存, 编辑器内的页面会同步更新。
+
+### 发布
+
+点击发布按钮
+![](https://user-gold-cdn.xitu.io/2019/7/3/16bb765fffe789d5?w=656&h=195&f=png&s=17575)  
+
+发布到dev环境  
+![](https://user-gold-cdn.xitu.io/2019/7/3/16bb766bad4d97e2?w=541&h=326&f=png&s=18506)
+
+然后点击预览, 在浏览器中查看页面效果
+![](https://user-gold-cdn.xitu.io/2019/7/3/16bb767630ce4d16?w=707&h=246&f=png&s=18483)
