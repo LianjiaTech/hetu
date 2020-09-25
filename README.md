@@ -265,6 +265,9 @@ pm2 list
 
 [CHANGELOG](/CHANGELOG.md)
 
+## 加入河图问题反馈群, 一起哈皮 😛
+![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4121716f83d647199b1b37c9dfca1f02~tplv-k3u1fbpfcp-zoom-1.image)
+
 ## 主要贡献者
 
 | Name                                     | Avatar                                                                                                     | Name                                     | Avatar                                                          | Name                                   | Avatar                                                                                                    | Name                                      | Avatar                                                                                                     | Name                               | Avatar                                                                                                     |
