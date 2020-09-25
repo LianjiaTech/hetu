@@ -3,11 +3,14 @@ import { FormComponentProps } from 'antd/es/form'
 import { Link } from 'react-router-dom';
 import { Row, Col, Form, Input, Button, message } from 'antd'
 import md5 from 'md5'
+import * as H from 'history'
 import LoginLayout from '../Layout'
 import Api from '~/apis'
 import './index.less'
 
-interface IProps extends FormComponentProps { }
+interface IProps extends FormComponentProps {
+  history: H.History
+}
 
 interface IState {
   // 下一次可发送验证的时间
@@ -23,7 +26,7 @@ const formItemLayout = {
   wrapperCol: { span: 24 },
 }
 
-class ModifyPswForm extends React.Component<IProps, IState> {
+class RegisterForm extends React.Component<IProps, IState> {
 
   state = {
     next_get_verify_time: 0,
@@ -54,8 +57,12 @@ class ModifyPswForm extends React.Component<IProps, IState> {
   }
 
   asyncSendData = async (data: any) => {
+    const { history } = this.props
     const res = await Api.Admin.asyncRegister({ ...data, password: md5(data.password) })
     message.success(res.message)
+    setTimeout(() => {
+      history.push(`/user/login${window.location.search}`)
+    }, 1000);
   }
 
   getVerifyCodeTimeout: NodeJS.Timeout
@@ -171,6 +178,6 @@ class ModifyPswForm extends React.Component<IProps, IState> {
   }
 }
 
-const WrappedModifyPswForm = Form.create<IProps>()(ModifyPswForm);
+const WrappedRegisterForm = Form.create<IProps>()(RegisterForm);
 
-export default WrappedModifyPswForm
+export default WrappedRegisterForm
