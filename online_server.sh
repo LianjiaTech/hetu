@@ -31,5 +31,5 @@ cp -R -f dist/client/index.html dist/server/dist/public/index.html
 echo "build end"
 
 echo "push source"
-scp -rC dist/server/dist/* $ACCOUNT:/data/www/hetu-server/dist/
+scp -rC dist/server/* $ACCOUNT:/data/www/hetu-server/
 echo "push success"
