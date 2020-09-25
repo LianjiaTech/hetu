@@ -266,7 +266,7 @@ pm2 list
 [CHANGELOG](/CHANGELOG.md)
 
 ## 问题咨询
-点击链接加入群聊 [河图开源交流](https://jq.qq.com/?_wv=1027&k=e1pNG2J8)
+- QQ群 【河图开源交流】 1046702822
 
 ## 主要贡献者
 
