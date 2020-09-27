@@ -5,7 +5,11 @@ export default {
   remote: {},
   elementConfig: {
     type: 'HtGuiContainer',
-    props: {},
+    props: {
+      style: {
+        padding: '16px',
+      },
+    },
     children: [
       {
         type: 'HtList',
@@ -124,6 +128,7 @@ export default {
               ],
             },
           ],
+          cardType: 'plain',
           fields: [
             {
               type: 'Input',
