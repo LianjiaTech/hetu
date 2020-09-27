@@ -6,18 +6,18 @@ export interface action<T = dynamicObject> extends AnyAction {
 
 export type IProjectDetail = {
   id: 0
-  name: ''
-  project_code: ''
-  description: ''
-  home: ''
-  logo: ''
+  name: string
+  project_code: string
+  description: string
+  home: string
+  logo: string
   env: {}
   proxy_success_code: 0
-  create_user_name: 'xxx'
+  create_user_name: string
   groupIds: []
   layout: { type: 'blank' }
-  proxy_host_test: ''
-  proxy_host_prod: ''
+  proxy_host_test: string
+  proxy_host_prod: string
   layout_type: 'blank'
   role: 'super' | 'ordinary' | null
 }

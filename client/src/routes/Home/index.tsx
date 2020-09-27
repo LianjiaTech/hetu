@@ -372,7 +372,7 @@ class PageHome extends React.Component<PageHomeProps, PageHomeState> {
                 <IconButton
                   icon="bug"
                   title="查看日志"
-                  href={`/__log__?projectCode=${projectDetail.project_code}`}
+                  href={projectDetail.project_code === 'admin' ? `/__hetu_log__` : `/__log__?projectCode=${projectDetail.project_code}`}
                 />
               )}
             </div>
