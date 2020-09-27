@@ -12,7 +12,7 @@ import Hetu from 'hetu'
 const elementConfig = {
   "type": "HtForm",
   "props": {
-    "url": "/mock/api/update",
+    "url": "/api/update",
     "fields": [
       {
         "field": "integer",

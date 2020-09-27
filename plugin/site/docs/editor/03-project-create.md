@@ -23,7 +23,8 @@ style="width: 500px">
 
 假设你的项目唯一标识为`aaa`,其中一个接口为 `/api/xxx/list`
 在浏览器中输入`http://beike.plus/aaa/api/xxx/list`, 可以查看接口转发信息, 请求失败时, 返回格式如下
-![](https://user-gold-cdn.xitu.io/2020/3/20/170f7318ff823303?w=2736&h=1426&f=png&s=369486)
+
+![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/067211a54e0840feb70b27735d277f38~tplv-k3u1fbpfcp-zoom-1.image)
 
 ### 4. 配置导航菜单
 

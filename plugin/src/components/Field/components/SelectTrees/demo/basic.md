@@ -10,7 +10,7 @@ import Hetu from 'hetu'
 
 const remote = {
   cityOptions: {
-    url: '/mock/api/tree/1',
+    url: '/api/tree/1',
     searchField: 'key',
   },
 }
@@ -33,7 +33,7 @@ const elementConfig = {
         optionsSourceType: "all",
         searchConfigs: [
           {
-            url: '/mock/api/tree/all',
+            url: '/api/tree/all',
             searchField: 'key',
           }
         ],
@@ -48,7 +48,7 @@ const elementConfig = {
         "optionsSourceType": "all",
         "searchConfigs": [
           {
-            "url": "/mock/api/tree/all",
+            "url": "/api/tree/all",
             "searchField": "key"
           }
         ]

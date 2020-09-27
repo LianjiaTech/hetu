@@ -32,7 +32,7 @@ const local = {
 }
 const remote = {
   cityOptions: {
-    url: '/mock/api/tree/1',
+    url: '/api/tree/1',
     searchField: 'key',
   },
 }
@@ -54,7 +54,7 @@ const elementConfig = {
         "optionsSourceType": "all",
         "searchConfigs": [
           {
-            "url": "/mock/api/tree/all",
+            "url": "/api/tree/all",
             "searchField": "",
             "params": {},
             "transform": "<%:= data => data %>"
@@ -79,7 +79,7 @@ const elementConfig = {
         "optionsSourceType": "all",
         "searchConfigs": [
           {
-            "url": "/mock/api/tree/all",
+            "url": "/api/tree/all",
             "searchField": "key",
             "params": {},
             "transform": "<%:= data => data %>"
@@ -103,25 +103,25 @@ const elementConfig = {
         "valueField": "value",
         "searchConfigs": [
           {
-            "url": "/mock/api/tree/1",
+            "url": "/api/tree/1",
             "searchField": "key",
             "params": {},
             "transform": "<%:= data => data %>"
           },
           {
-            "url": "/mock/api/tree/2",
+            "url": "/api/tree/2",
             "searchField": "key",
             "params": {},
             "transform": "<%:= data => data %>"
           },
           {
-            "url": "/mock/api/tree/3",
+            "url": "/api/tree/3",
             "searchField": "key",
             "params": {},
             "transform": "<%:= data => data %>"
           },
           {
-            "url": "/mock/api/tree/4",
+            "url": "/api/tree/4",
             "searchField": "key",
             "params": {},
             "transform": "<%:= data => data %>"
@@ -151,7 +151,7 @@ const elementConfig = {
         "optionsSourceType": "dependencies",
         "searchConfigs": [
           {
-            "url": "/mock/api/tree/all",
+            "url": "/api/tree/all",
             "searchField": "",
             "params": {},
             "transform": "<%:= data => data %>"

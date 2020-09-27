@@ -6,7 +6,7 @@ cols: 1
 order: 16
 ---
 
-[河图演示地址](https://localhost:1234/guiedit?route=%2Fproject%2Fhetu_demo%2Fhetu%2Fdemo%2FJsonEditor)
+[河图演示地址](http://beike.plus/guiedit?route=%2Fproject%2Fhetu_demo%2Fhetu%2Fdemo%2FJsonEditor)
 
 适用于编辑数据类型不确定的动态数据。
 
@@ -16,7 +16,7 @@ order: 16
 
 | 参数         | 说明       | 类型    | 默认值 |
 | ------------ | ---------- | ------- | ------ |
-| defaultValue |  默认值    | string  | -      |
-| value        |  默认值    | string  | -      |
+| defaultValue |  默认值   | string  | -      |
+| value        |  默认值   | string  | -      |
 | height       | 输入框高度 | number  | 100    |
 | disabled     | 禁用       | boolean | false  |

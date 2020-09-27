@@ -7,6 +7,8 @@ cols: 1
 order: 10
 ---
 
+[河图演示地址](http://beike.plus/guiedit?route=%2Fproject%2Fhetu_demo%2Fhetu%2Fdemo%2FUpload)
+
 通用文件上传服务, 可上传 图片、文件等, 已支持带签名访问。
 
 ## API

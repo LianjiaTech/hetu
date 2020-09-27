@@ -7,7 +7,7 @@ cols: 1
 order: 9
 ---
 
-[河图演示地址](https://localhost:1234/guiedit?route=%2Fproject%2Fhetu_demo%2Fhetu%2Fdemo%2FDatePicker)
+[河图演示地址](http://beike.plus/guiedit?route=%2Fproject%2Fhetu_demo%2Fhetu%2Fdemo%2FDatePicker)
 
 输入或选择日期的控件。
 

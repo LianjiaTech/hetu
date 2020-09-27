@@ -9,11 +9,11 @@ title: 选中数据回显策略
   - `SHOW_CHILD`: 只显示子节点(当父节点下所有子节点都选中时)
 
 ```jsx
-import Hetu from '@ke/hetu'
+import Hetu from 'hetu'
 
 const remote = {
   treeOptions: {
-    url: '/mock/api/tree/all',
+    url: '/api/tree/all',
     searchField: 'key',
   },
 }
@@ -21,7 +21,7 @@ const remote = {
 const elementConfig = {
   type: 'HtForm',
   props: {
-    url: '/mock/api/update',
+    url: '/api/update',
     buttons: [],
     fields: [
       {

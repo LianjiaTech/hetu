@@ -43,7 +43,7 @@ subtitle: 页面配置
 }
 ```
 
-在页面中可通过`${ xxxOptions }`获取值
+在页面中可通过`<%:= xxxOptions %>`获取值
 
 ### remote
 
@@ -57,15 +57,15 @@ subtitle: 页面配置
       "url": "/项目唯一标识/api/agent/detail",
       "method": "get",
       "params": {
-        "id": "${ location.query.id }"
+        "id": "<%:= location.query.id %>"
       },
-      "transform": "${ data => data }"
+      "transform": "<%:= data => data %>"
     }
   }
 }
 ```
 
-在页面中可通过`${ xxxDetail }`获取接口返回值
+在页面中可通过`<%:= xxxDetail %>`获取接口返回值
 
 #### remote API
 
@@ -118,7 +118,7 @@ node 中间层再把请求响应结果转发给浏览器
 
 在这里可以对页面渲染做拦截, 例如跳转到其他页面
 ```json
-"onRemoteResolved": "${ pagestate => window.location.replace('/abc') }"
+"onRemoteResolved": "<%:= pagestate => window.location.replace('/abc') %>"
 ```
 
 

@@ -9,7 +9,7 @@ import Hetu from 'hetu'
 const elementConfig = {
   "type": "HtForm",
   "props": {
-    "url": "/mock/api/update",
+    "url": "/api/update",
     "fields": [
       {
         "title": "分割线-左",

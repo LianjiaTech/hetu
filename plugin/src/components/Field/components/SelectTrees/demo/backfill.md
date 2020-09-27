@@ -38,7 +38,7 @@ const local = {
 }
 const remote = {
   cityOptions: {
-    url: '/mock/api/tree/1',
+    url: '/api/tree/1',
     searchField: 'key',
   },
 }
@@ -46,7 +46,7 @@ const remote = {
 const elementConfig = {
   type: 'HtForm',
   props: {
-    url: '/mock/api/update',
+    url: '/api/update',
     buttons: [],
     fields: [
       {
@@ -60,7 +60,7 @@ const elementConfig = {
         "optionsSourceType": "dependencies",
         "searchConfigs": [
           {
-            "url": "/mock/api/tree/all",
+            "url": "/api/tree/all",
             "searchField": "",
             "params": {},
             "transform": "<%:= data => data %>"
@@ -91,7 +91,7 @@ const elementConfig = {
         "optionsSourceType": "dependencies",
         "searchConfigs": [
           {
-            "url": "/mock/api/tree/all",
+            "url": "/api/tree/all",
             "searchField": "",
             "params": {},
             "transform": "<%:= data => data %>"

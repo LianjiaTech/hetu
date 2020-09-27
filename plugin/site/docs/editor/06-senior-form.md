@@ -20,11 +20,11 @@ title: 表单联动
   "field": "province",
   "title": "省",
   "type": "Select",
-  "options": "${provinceConfig}",
+  "options": "<%:= provinceConfig %>",
   // 当前表单值更新时, 发送http请求获取数据
   "onChangeRequests": [
     {
-      // 在数据中心的变量别名, 之后可用 ${ cityList } 使用这个别名
+      // 在数据中心的变量别名, 之后可用 <%:= cityList %> 使用这个别名
       "alias": "cityList",
       // 请求地址
       "url": "/mock/select/city",
@@ -32,7 +32,7 @@ title: 表单联动
       "method": "get",
       // 请求参数
       "params": {
-        "province": "${$$HtForm.province}"
+        "province": "<%:= $$HtForm.province %>"
       }
     }
   ],
@@ -53,15 +53,15 @@ title: 表单联动
   "field": "city",
   "title": "市",
   "type": "Select",
-  "options": "${ cityList }",
+  "options": "<%:= cityList %>",
   "onChangeRequests": [
     {
       "alias": "areaList",
       "url": "/mock/select/area",
       "method": "get",
       "params": {
-        "province": "${$$HtForm.province}",
-        "city": "${$$HtForm.city}"
+        "province": "<%:= $$HtForm.province %>",
+        "city": "<%:= $$HtForm.city %>"
       }
     }
   ],
