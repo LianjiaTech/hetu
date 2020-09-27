@@ -10,6 +10,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - 次版本号：当做了向下兼容的功能性新增，
 - 修订号：当做了向下兼容的问题修正。
 
-## [1.0.0] 2020-07-30
+## [1.0.0] 2020-09-27
 
-### 河图开源啦！！！
+### 河图开源

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {
+  Button,
   Menu,
   Icon,
   Spin,
@@ -63,15 +64,15 @@ class TheHeader extends Component<TheHeaderProps> {
     return (
       <div className="right">
         <Tooltip title="问题反馈">
-          <Icon type="form" className="hetu-feedback" onClick={this.handleFeedBack} />
+          <Button type="link" onClick={this.handleFeedBack} >问题反馈</Button>
         </Tooltip>
         <Dropdown overlay={menu}>
           <span className="action account ">
-            <Avatar size="small" className="avatar" srcSet={defaultAvatar} src={avatar} />
+            <Avatar size="small" className="avatar" srcSet={defaultAvatar} src={avatar || defaultAvatar} />
             <span className="name">{displayName}</span>
           </span>
         </Dropdown>
-      </div>
+      </div >
     )
   }
 

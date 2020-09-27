@@ -40,19 +40,19 @@ const elementConfig = {
         "optionsSourceType": "async",
         "searchConfigs": [
           {
-            "url": "/mock/api/tree/1",
+            "url": "/api/tree/1",
             "searchField": "key",
             "params": {},
             "transform": "<%:= data => data %>"
           },
           {
-            "url": "/mock/api/tree/2",
+            "url": "/api/tree/2",
             "searchField": "key",
             "params": {},
             "transform": "<%:= data => data %>"
           },
           {
-            "url": "/mock/api/tree/3",
+            "url": "/api/tree/3",
             "searchField": "",
             "params": {},
             "transform": "<%:= data => data %>"

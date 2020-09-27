@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./util.sh
+source ./scripts/util.sh
 
 ENV=$1
 

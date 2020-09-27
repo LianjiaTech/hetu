@@ -151,7 +151,7 @@ const elementConfig = {
         "optionsSourceType": "dependencies",
         "searchConfigs": [
           {
-            "url": "/mock/api/tree/all",
+            "url": "/api/tree/all",
             "searchField": "",
             "params": {},
             "transform": "<%:= data => data %>"

@@ -7,7 +7,7 @@ cols: 1
 order: 40
 ---
 
-[河图演示地址](https://localhost:1234/guiedit?route=%2Fproject%2Fhetu_demo%2Fhetu%2Fdemo%2FText)
+[河图演示地址](http://beike.plus/guiedit?route=%2Fproject%2Fhetu_demo%2Fhetu%2Fdemo%2FText)
 
 ## API
 

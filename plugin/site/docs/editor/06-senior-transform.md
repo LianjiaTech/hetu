@@ -18,7 +18,7 @@ transform 是一个箭头函数, 用于的数据格式转换, 下面介绍几种
     "projectDetail": {
       "url": "/xxx/api/xxx",
       "params": {},
-      "transform": "${ data => data.list[0] }"
+      "transform": "<%:=  data => data.list[0] %>"
     }
   }
 }
@@ -69,7 +69,7 @@ transform 是一个箭头函数, 用于的数据格式转换, 下面介绍几种
 {
   "type": "HtForm",
   "props": {
-    "transform": "${data => ({...data, projectId: location.query.projectId }) }"
+    "transform": "<%:= data => ({...data, projectId: location.query.projectId }) %>"
   }
 }
 ```

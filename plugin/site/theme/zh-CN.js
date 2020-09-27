@@ -7,6 +7,7 @@ module.exports = {
     'app.header.menu.editor': '通用需求',
     'app.header.menu.customize': '定制化需求',
     'app.header.menu.stark': '集成到已有项目',
+    'app.header.menu.resources': '视频教程',
     'app.header.menu.npm': '使用npm包',
     'app.header.menu.components': '组件',
     'app.header.menu.spec': '设计语言',
