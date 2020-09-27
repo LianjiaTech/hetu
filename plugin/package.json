@@ -11,7 +11,6 @@
     "lint": "tsdx lint src --fix",
     "start:site": "gulp copyDocs -w & cd ./site && npm start",
     "build:site": "gulp copyDocs & cd ./site && npm run build",
-    "deploy:site": "scp -r _site/* remote address",
     "start:umd": "tsdx watch --format umd --name Hetu",
     "build:umd": "tsdx build --format umd --name Hetu",
     "server:dist": "http-server dist -c-1 -p 8080 --cors"

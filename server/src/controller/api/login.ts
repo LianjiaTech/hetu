@@ -172,7 +172,7 @@ class OauthController extends BaseController {
       const last_send_time_key = `last_send_time_`
       const last_send_time = await RedisClient.get(`${last_send_time_key}${email}`)
 
-      if (last_send_time && Number(last_send_time) - now < 60) {
+      if (last_send_time && now - Number(last_send_time) < 60 * 1000) {
         // 时间间隔小于60秒
         return this.showError(`两次发送间隔不足60s`)
       }
