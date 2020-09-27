@@ -101,6 +101,10 @@ export async function initCDNResource(submodule: string) {
     publicPath = store.get('hetu-cdn-public')
   }
 
+  if (process.env.NODE_ENV === 'development') {
+    publicPath = `http://127.0.0.1:8080`
+  }
+
   publicPath.replace('//', '/')
 
   // 获取manifest.json

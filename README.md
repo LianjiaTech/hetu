@@ -15,41 +15,28 @@
 - ⚙️ 开发流程全部线上化，节省沟通、调试、运维成本
 - 🛡 使用 React、TypeScript、nodejs、express 开发
 
-
 ## 🖥 兼容环境  
-- 现代浏览器、IE11以上。
+- 现代浏览器、IE11以上
 
-## 🔗 链接
-- [文档](http://doc.beike.plus/)
-- [首页](http://beike.plus/)
+## 🔗 链接  
+- [项目文档](http://doc.beike.plus/)
+- [项目首页](http://beike.plus/)
+- [服务器部署](/LianjiaTech/hetu/deploy.md)
 
-## 🍼 开发前准备
-### 1. 一台云开发机
-用于代码部署
+## 🍼 准备
+### 1. 一个邮箱账号  
+用于发送验证码, 需要 [开启SMTP服务](https://www.yuque.com/pengyuanyuan-hqdma/ks1r1a/xs7xmn)  
 
-### 2. 一个邮箱账号
-需要[开启SMTP服务](https://juejin.im/post/6867430619635744776/), 用于发送验证码
+### 2. MySQL数据库
+  - 方式1: [手动部署MySQL数据库](https://www.yuque.com/pengyuanyuan-hqdma/ks1r1a/vsw0o9)  
+  - 方式2: 购买MySQL云服务  
 
-### 3. MySQL数据库
-可选择以下两种方式,部署MySQL服务
-  - [手动部署MySQL数据库](https://help.aliyun.com/document_detail/116727.html)
-  - 购买MySQL云服务
+### 3. 初始化数据库   
+将 [server/open_hetu.sql](/LianjiaTech/hetu/blob/master/server/open_hetu.sql) 文件, 通过mysql Gui工具, 导入到数据库  
 
-将`server/open_hetu.sql`文件, 导入到数据库
-
-## ⚒ 搭建服务
-
-### 第一步 创建配置文件
-在`/server/src`目录下创建`system_config.ini`文件, 配置内容如下
-
+### 4. 创建配置文件  
+克隆项目, 在项目根目录下创建`system_config.ini`文件, 配置内容如下(将****替换为自己的配置, 去掉注释内容)  
 ```ini
-[ssh]
-ssh_ip = ******     // 云服务器ip 
-ssh_user = ******   // 云服务器登录账号 
-
-[client]
-cdn_host = ******   // 静态资源CDN, 例如`cdn.beike.plus`
-
 [server]
 port = 9536         // node服务启动端口
 
@@ -67,208 +54,71 @@ user = ****         // 公共邮箱账号
 pass = ****         // 授权密码
 ```
 
-### 第二步 部署组件库和文档
-- `/plugin` 目录下的内容为组件库
-- `/plugin/site` 目录下的内容为组件库文档
-
-#### 1. 打包部署
-
-在云服务器上创建文件夹, 用于放静态资源
-```shell
-cd /data/www/
-
-# 创建文件夹, 用于存放静态资源
-mkdir hetu-client hetu-doc hetu-plugin hetu-server
-
-# 创建配置文件, 内容见上一步
-touch system_config.ini
+## 🚀 开始
+### 第一步 启动组件库服务
 ```
+# 进入plugin目录
+cd ./plugin
 
-#### 2. 配置 nginx
-如果没有安装nginx, 需要先 [安装nginx](https://developer.aliyun.com/article/699966)
+# 安装依赖
+yarn
 
-```shell
-# 进入nginx配置目录
-cd /etc/nginx/conf.d/
+# 打包输出esm模块
+yarn build:umd
 
-# 创建配置文件
-touch hetu-cdn.conf hetu-doc.conf hetu-server.conf
+# 启动组件库服务
+yarn server:dist
 ```
-
-申请3个域名, 例如 河图node服务`xxx.com`、cdn静态资源服务`cdn.xxx.com`、文档服务`doc.xxx.com`, 将这3个域名分别指向前面申请的云开发机ip, 配置如下:
-
-##### hetu-cdn.conf 配置
-```nginx
-server {
-    listen      80;
-    server_name cdn.xxx.com;
-    root  /data/www/;
-
-    gzip                    on;
-    gzip_http_version       1.1;
-    gzip_buffers            256 64k;
-    gzip_comp_level         5;
-    gzip_min_length         1000;
-    gzip_proxied            expired no-cache no-store private auth;
-    gzip_types              text/plain application/javascript application/x-javascript t
-ext/css application/xml text/javascript application/vnd.ms-fontobject font/ttf font/open
-type font/x-woff;
-
-    gzip_disable "MSIE 6";
-
-    if ( $request_method !~ GET|POST|HEAD ) {
-        return 403;
-    }
-
-    location ^~ /hetu-plugin/ {
-        add_header 'Access-Control-Allow-Origin'  '*';
-        alias /data/www/hetu-plugin/;
-    }
-
-    location ^~ /hetu-client/ {
-        add_header 'Access-Control-Allow-Origin'  '*';
-        alias /data/www/hetu-client/;
-    }
+打开 [http://127.0.0.1:8080/manifest.json](http://127.0.0.1:8080/manifest.json) 预览, 可以看到如下内容
+```json
+{
+  "files": {
+    "index.js": "/0.0.6/hetu.umd.development.js",
+    "index.min.js": "/0.0.6/hetu.umd.production.min.js",
+    "index.css": "/0.0.6/index.css"
+  },
+  "entrypoints": [
+    "index.js",
+    "index.css"
+  ]
 }
 ```
+河图主应用, 会自动读取里面的内容, 并动态加载资源
 
-##### hetu-doc.conf 配置
-
-```nginx
-server {
-    listen      80;
-    server_name doc.xxx.com;
-    root  /data/www/hetu-doc;
-
-    gzip                    on;
-    gzip_http_version       1.1;
-    gzip_buffers            256 64k;
-    gzip_comp_level         5;
-    gzip_min_length         1000;
-    gzip_proxied            expired no-cache no-store private auth;
-    gzip_types              text/plain application/javascript application/x-javascript t
-ext/css application/xml text/javascript application/vnd.ms-fontobject font/ttf font/open
-type font/x-woff;
-
-    gzip_disable "MSIE 6";
-
-    if ( $request_method !~ GET|POST|HEAD ) {
-        return 403;
-    }
-
-    location / {
-        index index.html index.htm;
-        if (!-f $request_filename) {
-            rewrite ^/(.*)$ /index.html?/$1 last;
-            break;
-        }
-    }
-}
-```
-
-##### hetu-server.conf 
-```nginx
-server {
-    listen      80;
-    server_name xxx.com;
-
-    location / {
-        proxy_set_header Host $host;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_pass http://127.0.0.1:9536;
-    }
-}
-```
-
-重启nginx
+### 第二步 安装依赖
+安装client层依赖
 ```shell
-# 检测配置文件是否正确
-nginx -t
-
-# 重启nginx
-nginx -s reload
+cd ./client && yarn
 ```
 
-- 打开 `http://doc.xxx.com` 预览文档服务  
-- 打开 `http://cdn.xxx.com/hetu-plugin/manifest.json` 预览静态资源服务
-
-### 第三步 安装项目依赖
+安装server层依赖
 ```shell
-# server
-cd ./server && npm install
-
-# client
-cd ../client && npm install
+cd ./server && yarn
 ```
 
-### 第四步 开始开发
+### 第三步 启动服务
+启动client层服务
 ```shell
-# client
-cd ./client && npm start
-# server
-cd server && npm run dev
+cd ./client && yarn start
 ```
 
-> 打开`127.0.0.1:1234`预览
+启动server层服务
+```shell
+cd server && yarn dev
+```
+
+打开 [http://127.0.0.1:1234](http://127.0.0.1:1234) 预览, 可使用任意邮箱注册账号
 
 ![](https://file.ljcdn.com/hetu-cdn/hetu-display-index-1598618209.png)
 
-
-### 第五步 打包部署
-```shell
-# 打包 && 部署client 
-sh online_client.sh
-
-# 打包 && 部署server
-sh online_server.sh
-```
-### 第六步 在云服务器上启动node服务
-
-#### 在centos上安装node.js
-EPEL（Extra Packages for Enterprise Linux）企业版Linux的额外软件包，是Fedora小组维护的一个软件仓库项目，为RHEL/CentOS提供他们默认不提供的软件包。
-```
-# 先确认系统是否已安装epel-release包
-yum info epel-release 
-
-# 若已安装, 则跳过
-sudo yum install epel-release
-
-# 安装nodejs
-sudo yum install nodejs
-
-# 查看node版本
-node -v
-```
-
-#### 使用pm2启动node服务
-pm2是node进程管理工具, 利用它可以简化很多node应用管理的繁琐任务，如性能监控、自动重启、负载均衡等。
-
-```
-# 全局安装
-sudo npm i -g pm2
-
-# 启动一个名为hetu的node服务, --watch意味着文件变化, 就会重新启动服务
-pm2 start dist/app.js --watch --name 'hetu'
-
-# 设置开机启动
-pm2 start up
-
-# 保存当前进程状态
-pm2 save
-
-# 查看当前node服务进程
-pm2 list
-```
-
-## 版本记录
+## 🤝 版本记录
 
 [CHANGELOG](/CHANGELOG.md)
 
-## 问题咨询
+## 🙋 问题咨询
 - QQ群 【河图开源交流】 1046702822
 
-## 主要贡献者
+## ❤️ 主要贡献者
 
 | Name                                     | Avatar                                                                                                     | Name                                     | Avatar                                                          | Name                                   | Avatar                                                                                                    | Name                                      | Avatar                                                                                                     | Name                               | Avatar                                                                                                     |
 | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------- | -------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------- |
