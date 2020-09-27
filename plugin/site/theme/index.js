@@ -3,6 +3,7 @@ const path = require('path')
 const contentTmpl = './template/Content/index'
 const redirectTmpl = './template/Redirect'
 const appShellTmpl = './template/AppShell'
+const resourcesTmpl = './template/Resources/index'
 
 function pickerGenerator(module) {
   const tester = new RegExp(`^docs/${module}`)
@@ -42,6 +43,8 @@ module.exports = {
     'docs/editor': pickerGenerator('editor'),
     'docs/customize': pickerGenerator('customize'),
     'docs/stark': pickerGenerator('stark'),
+    'docs/resources': pickerGenerator('resources')
+
   },
   plugins: ['bisheng-plugin-description', 'bisheng-plugin-toc?maxDepth=2&keepElem', 'bisheng-plugin-antd?injectProvider', 'bisheng-plugin-react?lang=__react'],
   routes: {
@@ -56,6 +59,10 @@ module.exports = {
       {
         path: 'index-cn',
         component: redirectTmpl,
+      },
+      {
+        path: 'docs/resources/video',
+        component: resourcesTmpl,
       },
       {
         path: 'docs/editor/:children',

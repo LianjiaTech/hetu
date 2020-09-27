@@ -142,6 +142,16 @@ export default class Header extends React.Component {
             <FormattedMessage id="app.header.menu.editor" />
           </Link>
         </Menu.Item>
+        <Menu.Item key="docs/resources">
+          <Link to="/docs/resources/video">
+            <FormattedMessage id="app.header.menu.resources" />
+          </Link>
+        </Menu.Item>
+        <Menu.Item key="docs/stark">
+          <Link to="/docs/stark/01-introduce">
+            <FormattedMessage id="app.header.menu.stark" />
+          </Link>
+        </Menu.Item>
         {/* <Menu.Item key="docs/stark">
           <Link to="/docs/stark/01-introduce">
             <FormattedMessage id="app.header.menu.stark" />
