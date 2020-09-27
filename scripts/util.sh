@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ConfigFile="../system_config.ini"
+ConfigFile="./system_config.ini"
 
 function ReadINIfile()  
 {   

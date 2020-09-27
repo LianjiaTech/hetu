@@ -1,6 +1,7 @@
 #!/bin/bash
+current_path=$(pwd)
 
-source ./util.sh
+source ./scripts/util.sh
 
 ENV=$1
 
@@ -25,10 +26,11 @@ echo "install site deps"
 cd ./site 
 npm install --registry=https://registry.npm.taobao.org/
 echo "build site source"
-npm run build
+cd ..
+npm run build:site
 
 echo "build success"
-cd ../..
+cd ..
 
 cp -R -f plugin/_site/* dist/site/
 echo "build end"
