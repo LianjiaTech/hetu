@@ -20,7 +20,7 @@ function getWorkerUrl(_workerId: string, label: string) {
   }
 }
 
-if (process.env.NODE_ENV === 'production') {
+if (publicPath) {
   ;(window as any).MonacoEnvironment = {
     getWorkerUrl: function(workerId: string, label: string) {
       const url = getWorkerUrl(workerId, label)

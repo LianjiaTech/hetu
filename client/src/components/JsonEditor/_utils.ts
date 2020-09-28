@@ -1,4 +1,5 @@
-const publicPath = window.location.protocol + process.env.PUBLIC_URL
+const publicPath = window.$$PUBLIC_URL
+
 function getWorkerUrl(workerId: string, label: string) {
   switch (label) {
     case 'json':
@@ -21,7 +22,7 @@ function getWorkerUrl(workerId: string, label: string) {
 
 if (process.env.NODE_ENV === 'production') {
   ;(window as any).MonacoEnvironment = {
-    getWorkerUrl: function(workerId: string, label: string) {
+    getWorkerUrl: function (workerId: string, label: string) {
       const url = getWorkerUrl(workerId, label)
       return `data:text/javascript;charset=utf-8,${encodeURIComponent(`                        
                       self.MonacoEnvironment = {

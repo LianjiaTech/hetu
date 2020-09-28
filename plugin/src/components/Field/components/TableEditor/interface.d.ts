@@ -4,7 +4,7 @@ import { BaseProps, JsonSchema } from '~/types'
  * Table组件列配置
  */
 export interface TableColumn {
-  visible: boolean | ((text: any, row: any) => boolean)
+  visible?: boolean | ((text: any, row: any) => boolean)
   title: string
   dataIndex?: string
   fixed?: 'left' | 'right' | boolean
