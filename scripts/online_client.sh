@@ -16,9 +16,9 @@ mkdir -p dist/client
 
 echo "install deps"
 cd ./client
-npm install --registry=https://registry.npm.taobao.org/
+yarn
 echo "build source"
-npm run build
+yarn build
 echo "build success"
 cd ..
 

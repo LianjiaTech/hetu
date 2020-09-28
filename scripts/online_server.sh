@@ -16,10 +16,10 @@ mkdir -p dist/server
 
 echo "install server deps"
 cd ./server 
-npm install --registry=https://registry.npm.taobao.org/
+yarn
 
 echo "build source"
-npm run build
+yarn build
 echo "build success"
 cd ..
 

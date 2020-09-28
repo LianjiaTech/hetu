@@ -6,25 +6,25 @@
 cd ./plugin
 
 # 安装依赖
-npm install
+yarn
 
 # 打包输出esm模块
-npm run build
+yarn build
 
 # 安装文档依赖
-cd ./site & npm install
+cd ./site & yarn
 
 # 启动文档服务
-npm start
+yarn start
 ```
 
 ## 编辑器调试
 ```
 打包输出umd模块
-npm run build:umd
+yarn build:umd
 
 # 启动静态服务, 
-npm run start:dist 
+yarn start:dist 
 ```
 
 打开 [河图页面](http://beike.plus), 同时打开Chrome调试工具面板, 在`Local Storage`中设置
