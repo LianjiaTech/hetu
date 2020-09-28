@@ -4,7 +4,7 @@
   "private": false,
   "scripts": {
     "dev": "NODE_ENV=dev ts-node-dev src/app.ts",
-    "build": "npm run copy-static-assets && tsc",
+    "build": "yarn copy-static-assets && tsc",
     "copy-static-assets": "node copy_static_assets.js",
     "task": "NODE_ENV=dev node dist/task.js",
     "report:online": "NODE_ENV=dev node dist/task.js sendEmail:OnlineReport",

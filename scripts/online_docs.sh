@@ -17,17 +17,17 @@ mkdir -p dist/site
 
 echo "install components deps"
 cd ./plugin
-npm install --registry=https://registry.npm.taobao.org/
+yarn
 echo "build components"
-npm run build
+yarn build
 echo "build components success"
 
 echo "install site deps"
 cd ./site 
-npm install --registry=https://registry.npm.taobao.org/
+yarn
 echo "build site source"
 cd ..
-npm run build:site
+yarn build:site
 
 echo "build success"
 cd ..

@@ -16,9 +16,9 @@ mkdir -p dist/plugin
 
 echo "install deps"
 cd ./plugin 
-npm install --registry=https://registry.npm.taobao.org/
+yarn
 echo "build source"
-npm run build:umd
+yarn build:umd
 
 echo "build success"
 cd ..
