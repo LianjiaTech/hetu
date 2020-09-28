@@ -22,7 +22,10 @@ import './index.less'
 import _history from './utils/history'
 
 // JsonEditor 组件配置
-window.$$PUBLIC_URL = window.location.protocol + process.env.PUBLIC_URL
+window.$$PUBLIC_URL =
+  process.env.NODE_ENV === 'development'
+    ? window.location.origin + '/'
+    : window.location.protocol + process.env.PUBLIC_URL
 
 initGlobalResource()
 
