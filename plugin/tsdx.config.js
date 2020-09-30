@@ -69,7 +69,11 @@ module.exports = {
       // https://www.rollupjs.com/guide/big-list-of-options/#%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BDcore-functionality
       config.output.globals = {
         'react': 'React',
+        'react-dom': 'ReactDom',
         'react-is': 'ReactIs',
+        'mobx': 'Mobx',
+        'mobx-react': 'MobxReact',
+        'mobx-react-lite': 'MobxReactLite',
         '@ice/stark-data': '@ice/stark-data',
         'axios': 'Axios',
         'antd': 'Antd',

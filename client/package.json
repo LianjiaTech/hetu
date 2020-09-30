@@ -24,6 +24,8 @@
     "lodash-decorators": "^4.4.1",
     "md5": "^2.3.0",
     "mitt": "^1.2.0",
+    "mobx": "^5.15.7",
+    "mobx-react": "^6.3.0",
     "moment": "^2.19.1",
     "monaco-editor": "0.18.1",
     "path-to-regexp": "6.1.0",
