@@ -175,7 +175,11 @@ export function initGlobalResource() {
   // 将外部依赖挂载到window上
   Object.assign(window, {
     React: require('react'),
+    ReactDom: require('react-dom'),
     ReactIs: require('react-is'),
+    Mobx: require('mobx'),
+    MobxReact: require('mobx-react'),
+    MobxReactLite: require('mobx-react-lite'),
     '@ice/stark-data': require('@ice/stark-data'),
     Axios: require('axios'),
     Antd: require('antd'),
