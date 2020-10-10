@@ -23,6 +23,7 @@ class Account extends Base {
     const affectRowCountList = await Knex.insert({
       ...params,
       create_time: moment().unix(),
+      update_time: moment().unix()
     })
       .into(this.TABLE_NAME)
       .catch(this.dbInsertErrorHandler)
