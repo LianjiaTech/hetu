@@ -286,7 +286,7 @@ CREATE TABLE `submodule` (
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户id',
-  `email` varchar(20) NOT NULL COMMENT '邮箱',
+  `email` varchar(100) NOT NULL COMMENT '邮箱',
   `name` varchar(20) NOT NULL COMMENT '用户名',
   `password` varchar(32) NOT NULL COMMENT '密码',
   `create_time` int(13) NOT NULL COMMENT '创建时间',
