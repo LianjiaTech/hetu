@@ -120,6 +120,8 @@ cd server && yarn dev
 
 [CHANGELOG](/CHANGELOG.md)
 
+## 🙋 问题咨询
+- QQ群 【河图开源交流】 782899873
 
 ## ❤️ 主要贡献者
 
