@@ -20,7 +20,7 @@ title: 介绍
 
 ## 链接  
 - [项目文档](http://139.155.239.172/)
-- [项目首页](http://139.155.239.172/)
+- [项目首页](http://139.155.239.172:9536/)
 - [服务器部署](https://github.com/LianjiaTech/hetu/deploy.md)
 - [视频教程](http://139.155.239.172/docs/resources/video)
 
