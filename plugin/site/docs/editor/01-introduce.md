@@ -33,5 +33,5 @@ title: 介绍
 ![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ab52f389a41441cb84ec8f3ccebb8928~tplv-k3u1fbpfcp-zoom-1.image)
 
 ## 问题咨询
-- QQ群 【河图开源交流】 1046702822
+- QQ群 【河图开源交流】 782899873
 - 群主QQ 1024371442 (备注河图开源咨询)
