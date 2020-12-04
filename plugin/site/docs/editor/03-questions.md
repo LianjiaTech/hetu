@@ -84,7 +84,7 @@ style="width: 200px">
 
 #### Q：表单联动怎么配置?
 
-A：详细见[表单联动](http://doc.beike.plus/docs/editor/06-senior-form)
+A：详细见[表单联动](http://139.155.239.172/docs/editor/06-senior-form)
 
 #### Q：模糊搜索怎么配置?
 

@@ -364,7 +364,7 @@ class PageHome extends React.Component<PageHomeProps, PageHomeState> {
                 <IconButton
                   icon="question-circle"
                   title="查看文档"
-                  href="http://doc.beike.plus"
+                  href="http://139.155.239.172/"
                 />
               )}
 

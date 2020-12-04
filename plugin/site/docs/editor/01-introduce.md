@@ -19,10 +19,10 @@ title: 介绍
 - 现代浏览器、IE11以上
 
 ## 链接  
-- [项目文档](http://doc.beike.plus/)
-- [项目首页](http://beike.plus/)
+- [项目文档](http://139.155.239.172/)
+- [项目首页](http://139.155.239.172/)
 - [服务器部署](https://github.com/LianjiaTech/hetu/deploy.md)
-- [视频教程](http://doc.beike.plus/docs/resources/video)
+- [视频教程](http://139.155.239.172/docs/resources/video)
 
 ## 开发流程
 
