@@ -81,11 +81,11 @@ subtitle: 页面配置
 
 - 项目唯一标识为 `bkf`,
 - 项目的接口转发地址为``
-- 浏览器 url 为`http://beike.plus/bkf/xxx/list?id=1234`
+- 浏览器 url 为`http://139.155.239.172:9536/bkf/xxx/list?id=1234`
 
-1. 浏览器发送 `/bkf/api/agent/detail?id=1234` 到河图 node 中间层`http://beike.plus`
+1. 浏览器发送 `/bkf/api/agent/detail?id=1234` 到河图 node 中间层`http://139.155.239.172`
 
-2. node 中间层`http://beike.plus` 解析 url, 拿到项目唯一标识`bkf`, 根据这个标识, 将请求转发到``, 并携带自定义`header`信息
+2. node 中间层`http://139.155.239.172:9536` 解析 url, 拿到项目唯一标识`bkf`, 根据这个标识, 将请求转发到``, 并携带自定义`header`信息
 
 3. node 中间层发送`/api/agent/detail?id=1234`的请求, 假设响应结果为
 

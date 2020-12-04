@@ -7,7 +7,7 @@ title: 六.版本回滚
 版本回滚的流程如下
 ![](https://user-gold-cdn.xitu.io/2019/8/16/16c98995dd241899?w=835&h=186&f=png&s=20180)
 
-### 1. 进入项目管理页面 [http://beike.plus](http://beike.plus)
+### 1. 进入项目管理页面 [http://139.155.239.172:9536](http://139.155.239.172:9536)
 
 找到对应的项目, 点击页面管理。
 ![](https://user-gold-cdn.xitu.io/2019/7/3/16bb77da3779098c?w=811&h=142&f=png&s=16748)

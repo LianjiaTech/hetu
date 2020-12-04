@@ -4,7 +4,7 @@ order: 1
 title: 一.创建项目
 ---
 
-### 1. 进入河图后台 [http://beike.plus](http://beike.plus)
+### 1. 进入河图后台 [http://139.155.239.172:9536](http://139.155.239.172:9536)
 
 点击右上角`新建项目`
 
@@ -22,7 +22,7 @@ style="width: 500px">
 #### 3.1 测试接口转发是否配置成功
 
 假设你的项目唯一标识为`aaa`,其中一个接口为 `/api/xxx/list`
-在浏览器中输入`http://beike.plus/aaa/api/xxx/list`, 可以查看接口转发信息, 请求失败时, 返回格式如下
+在浏览器中输入`http://139.155.239.172:9536/aaa/api/xxx/list`, 可以查看接口转发信息, 请求失败时, 返回格式如下
 
 ![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/067211a54e0840feb70b27735d277f38~tplv-k3u1fbpfcp-zoom-1.image)
 

@@ -58,7 +58,7 @@ export default (_formData: JsonSchema.DynamicObject): Editor.BaseProperties => {
       title: '动态加载配置',
       desc: '',
       doc:
-        'http://doc.beike.plus/components/Field/components/SelectCascade/#components-Field-components-SelectCascade-demo-changeOnSelect',
+        'http://139.155.239.172//components/Field/components/SelectCascade/#components-Field-components-SelectCascade-demo-changeOnSelect',
       type: 'arrayOf',
       defaultValue: [],
       properties: {

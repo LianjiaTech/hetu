@@ -44,7 +44,7 @@ export function getHost() {
     case 'testing':
       return 'http://test-beike.plus'
     default:
-      return 'http://beike.plus'
+      return 'http://139.155.239.172:9536'
   }
 }
 

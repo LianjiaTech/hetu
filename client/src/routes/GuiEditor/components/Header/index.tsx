@@ -217,7 +217,7 @@ export default class TheHeader extends Component<Props, State> {
   }
 
   getDocumentUrl = () => {
-    return 'http://doc.beike.plus'
+    return 'http://139.155.239.172/'
   }
 
   render() {

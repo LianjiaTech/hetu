@@ -6,7 +6,7 @@ cols: 1
 order: 16
 ---
 
-[河图演示地址](http://beike.plus/guiedit?route=%2Fproject%2Fhetu_demo%2Fhetu%2Fdemo%2FJsonEditor)
+[河图演示地址](http://139.155.239.172:9536/guiedit?route=%2Fproject%2Fhetu_demo%2Fhetu%2Fdemo%2FJsonEditor)
 
 适用于编辑数据类型不确定的动态数据。
 

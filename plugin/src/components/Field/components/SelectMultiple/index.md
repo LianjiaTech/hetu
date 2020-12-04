@@ -7,7 +7,7 @@ cols: 1
 order: 7
 ---
 
-[河图演示地址](http://beike.plus/guiedit?route=%2Fproject%2Fhetu_demo%2Fhetu%2Fdemo%2FSelectMultiple)
+[河图演示地址](http://139.155.239.172:9536/guiedit?route=%2Fproject%2Fhetu_demo%2Fhetu%2Fdemo%2FSelectMultiple)
 
 ## 何时使用
 
