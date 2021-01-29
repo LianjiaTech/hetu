@@ -1,6 +1,5 @@
 // PostCSS plugins
 const postcss = require('rollup-plugin-postcss')
-const alias = require('rollup-plugin-alias')
 const resolve = require('rollup-plugin-node-resolve')
 const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
@@ -53,16 +52,12 @@ module.exports = {
         extensions: ['.less', '.css'],
       }),
       resolve({ extensions }),
-      alias({
-        '~': './src',
-        '@test': './test',
-      }),
       options.format === 'umd' && myRollupPlugin()
     )
 
     if (options.format === 'esm') {
       // 输出路径加上版本号
-      config.output.file = config.output.file.replace(`${__dirname}/dist`, `${__dirname}/lib`)
+      config.output.file = config.output.file.replace(path.resolve(__dirname, './dist'), path.resolve(__dirname, './lib'))
     }
 
     if (options.format === 'umd') {
@@ -92,11 +87,10 @@ module.exports = {
       }
 
       // 输出路径加上版本号
-      config.output.file = config.output.file.replace(`${__dirname}/dist`, `${__dirname}/dist/${pkg.version}`)
+      config.output.file = config.output.file.replace(path.resolve(__dirname,'./dist'), path.resolve(__dirname, './dist/'+pkg.version))
 
       // https://www.rollupjs.com/guide/tools/#peer-dependencies
       config.external = Object.keys(config.output.globals)
-
     }
 
     return config

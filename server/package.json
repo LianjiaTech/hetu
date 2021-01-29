@@ -3,12 +3,12 @@
   "description": "河图",
   "private": false,
   "scripts": {
-    "dev": "NODE_ENV=dev ts-node-dev src/app.ts",
+    "dev": "cross-env NODE_ENV=dev ts-node-dev src/app.ts",
     "build": "yarn copy-static-assets && tsc",
     "copy-static-assets": "node copy_static_assets.js",
-    "task": "NODE_ENV=dev node dist/task.js",
-    "report:online": "NODE_ENV=dev node dist/task.js sendEmail:OnlineReport",
-    "report:develop": "NODE_ENV=dev node dist/task.js sendEmail:DevelopReport"
+    "task": "cross-env NODE_ENV=dev node dist/task.js",
+    "report:online": "cross-env NODE_ENV=dev node dist/task.js sendEmail:OnlineReport",
+    "report:develop": "cross-env NODE_ENV=dev node dist/task.js sendEmail:DevelopReport"
   },
   "dependencies": {
     "@adonisjs/ace": "5.0.8",
