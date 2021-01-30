@@ -69,10 +69,10 @@ cd ./plugin
 yarn
 
 # 打包输出esm模块
-yarn build:umd
+yarn run build:umd
 
 # 启动组件库服务
-yarn server:dist
+yarn run server:dist
 ```
 打开 [http://127.0.0.1:8080/manifest.json](http://127.0.0.1:8080/manifest.json) 预览, 可以看到如下内容
 ```json
@@ -93,23 +93,23 @@ yarn server:dist
 ### 第二步 安装依赖
 安装client层依赖
 ```shell
-cd ./client && yarn
+cd ../client && yarn
 ```
 
 安装server层依赖
 ```shell
-cd ./server && yarn
+cd ../server && yarn
 ```
 
 ### 第三步 启动服务
 启动client层服务
 ```shell
-cd ./client && yarn start
+cd ../client && yarn start
 ```
 
 启动server层服务
 ```shell
-cd server && yarn dev
+cd ../server && yarn dev
 ```
 
 打开 [http://127.0.0.1:1234](http://127.0.0.1:1234) 预览, 可使用任意邮箱注册账号

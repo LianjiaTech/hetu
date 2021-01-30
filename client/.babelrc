@@ -26,10 +26,14 @@
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-object-rest-spread",
     [
-      "babel-plugin-root-import",
+      "module-resolver",
       {
-        "rootPathPrefix": "~",
-        "rootPathSuffix": "./src"
+        "root": "./",
+        "alias": {
+          "~": "./src",
+          "@test": "./test",
+          "*": ["src/*", "node_modules/*"]
+        }
       }
     ]
   ],
