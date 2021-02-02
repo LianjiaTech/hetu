@@ -27,7 +27,8 @@
 ### 1. 一个邮箱账号  
 用于发送验证码, 需要 [开启SMTP服务](https://www.yuque.com/pengyuanyuan-hqdma/ks1r1a/xs7xmn)  
 
-### 2. MySQL数据库
+### 2. MySQL数据库 
+> 本项目使用mysql 5.7版本
   - 方式1: [手动部署MySQL数据库](https://www.yuque.com/pengyuanyuan-hqdma/ks1r1a/vsw0o9)  
   - 方式2: 购买MySQL云服务  
 
