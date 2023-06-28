@@ -57,7 +57,7 @@ async function createCode(email: string) {
 async function createToken(email: string) {
   const randexp = new RandExp(/[a-zA-Z0-9]{22}/)
   const token = randexp.gen()
-  // 设置缓存, 10秒过期
+  // 设置缓存, 1天过期
   await RedisClient.set(token, email, 'EX', Token_expries)
   return token
 }
